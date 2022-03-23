@@ -4,6 +4,9 @@ const axios = require('axios')
 const fs = require('fs')
 const port = process.env.PORT || 3000;
 
+app.enable('trust proxy');
+app.set("json spaces",2)
+
 app.get("/", function (req, res) {
     res.send("Ola usuário"); 
 })
