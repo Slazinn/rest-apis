@@ -17,7 +17,7 @@ CNPJ: https://slazinnn.herokuapp.com/api/consulta/cnpj/11966491483/token `;
 
 
 app.get("/", function (req, res) {
-    res.send("Ola usuário"); 
+    res.send(`${premium}); 
 })
 
 const token = ["slazinnnn","loserzinn","texasdomina"]
