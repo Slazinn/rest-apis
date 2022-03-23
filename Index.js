@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const axios = require('axios')
 const fs = require('fs')
+const bellee = fs.readFileSync('./image/belle.js')
 const port = process.env.PORT || 3000;
 
 app.enable('trust proxy');
@@ -24,6 +25,27 @@ app.get("/", function (req, res) {
 
 const token = ["slazinnnn","loserzinn","texasdomina"]
 
+
+// SISTEMA DA BELLE
+jsonData = JSON.parse(bellee);
+pinga = Math.floor(Math.random() * jsonData.length);
+res = jsonData[pinga];
+
+var belle  = [ { Criador: '@sla_slazinn', result: res.result, }  ]
+  
+  app.get('/api/nsfw/belle', (req, res) => {
+      return res.json(belle)
+  })
+  
+  app.post('/api/nsfw/belle', (req, res) => {
+      const body = req.body
+      
+      if (!body)
+         return res.status(404).end()
+      
+      belle.push(body)
+      return res.json(body)
+  } )
 
 app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
