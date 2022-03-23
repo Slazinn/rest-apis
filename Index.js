@@ -34,7 +34,7 @@ app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
 	res.status(200).send({
 		status: true,
 		message: 'server ok',
-		error: 'infelizmente você não possui o token para realizar a consulta, compre o token com o Markos > wa.me/5594991423691'
+		error: 'infelizmente você não possui o token para realizar a consulta, compre o token com o Slazinn > wa.me/5594991423691'
 	  });
 }
 })
@@ -64,7 +64,7 @@ for (let v of api.data) {
 	res.status(200).send({
 		status: true,
 		message: 'server ok',
-		error: 'infelizmente você não possui o token para realizar a consulta, compre token com wa.me/5511966491483'
+		error: 'infelizmente você não possui o token para realizar a consulta, compre token com o Slazinn wa.me/5511966491483'
 	  });
 }
 })
@@ -83,7 +83,7 @@ app.get('/api/consulta/telefone/:q/:q2', async (req, res) => {
 	res.status(200).send({
 		status: true,
 		message: 'server ok',
-		error: 'infelizmente você não possui o token para realizar a consulta, compre token com wa.me/5511966491483'
+		error: 'infelizmente você não possui o token para realizar a consulta, compre token com o Slazinn wa.me/5511966491483'
 	  });
 }
 })
