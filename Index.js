@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const axios = require('axios')
 const fs = require('fs')
-const bellee = fs.readFileSync('./image/belle.js')
 const port = process.env.PORT || 3000;
 
 app.enable('trust proxy');
