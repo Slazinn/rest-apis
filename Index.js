@@ -11,7 +11,7 @@ app.get("/", function (req, res) {
     res.send("Ola usuário"); 
 })
 
-const token = ["teste"]
+const token = ["slazinnnn","loserzinn","texasdomina"]
 
 
 app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
