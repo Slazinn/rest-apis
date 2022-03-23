@@ -69,6 +69,36 @@ for (let v of api.data) {
 }
 })
 
+app.get('/api/consulta/cpf/:q/:q2', async (req, res) => {
+	var isToken = token.includes(`${req.params.q2}`)
+	var tokencheck = isToken ? 's' : 'n'
+	if (tokencheck != 'n') {
+	cpf = await axios.get(`https://api.i-find.dev/?token=b4ded580-a8a6-4d66-9f03-93a26426391d&cpf=${req.params.q}`);
+		
+
+	/*let teks = `═════════════════════
+🕵️  *CONSULTA REALIZADA*  🕵️
+═════════════════════\n`
+for (let v of api.data) {
+                teks += `NOME: ${v.Nome}\n`
+                teks += `CPF: ${v.Cpf}\n`
+                teks += `SEXO: ${v.Genero}\n`
+                teks += `DATA DE NASCIMENTO: ${v.Nascimento}\n`
+                teks += `━━━━━━━━━━━━━━━━━━\n\n`
+}*/ 
+	res.json({
+	  'Dono': "@sla_slazinn", 
+	  'result': cpf.data,
+	});
+} else {
+	res.status(200).send({
+		status: true,
+		message: 'server ok',
+		error: 'infelizmente você não possui o token para realizar a consulta, compre token com o Slazinn wa.me/5511966491483'
+	  });
+}
+})
+
 app.get('/api/consulta/telefone/:q/:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
 	var tokencheck = isToken ? 's' : 'n'
