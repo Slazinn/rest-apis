@@ -7,6 +7,13 @@ const port = process.env.PORT || 3000;
 app.enable('trust proxy');
 app.set("json spaces",2)
 
+const premium = ` Olá usuário! Minhas Apis estão em desenvolvimento, 
+qual erro ou bug contate meu dono! wa.me/5511966491483
+
+Apis disponível de consulta
+
+Telefone: https://slazinnn.herokuapp.com/api/consulta/telefone/11966491483/token
+CNPJ: https://slazinnn.herokuapp.com/api/consulta/cnpj/11966491483/token
 app.get("/", function (req, res) {
     res.send("Ola usuário"); 
 })
