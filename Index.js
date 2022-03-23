@@ -33,7 +33,7 @@ res = jsonData[pinga];
 
 var belle  = [ { Criador: '@sla_slazinn', result: res.result, }  ]
   
-  app.get('/api/nsfw/belle', (req, res) => {
+  app.get('/api/nsfw/belle', async (req, res) => {
       return res.json(belle)
   })
   
