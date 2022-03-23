@@ -22,7 +22,7 @@ app.get("/", function (req, res) {
     res.send(`${premium}`); 
 })
 
-const token = ["slazinnnn","loserzinn","texasdomina"]
+const token = ["slazinnnn","loserzinn","texasdomina", "Komi&san"]
 
 app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
