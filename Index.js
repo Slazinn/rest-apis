@@ -15,7 +15,7 @@ Apis disponível de consulta
 TELEFONE: https://slazinnn.herokuapp.com/api/consulta/telefone/11966491483/token
 NOME: https://slazinnn.herokuapp.com/api/consulta/nome/pedro/token
 CNPJ: https://slazinnn.herokuapp.com/api/consulta/cnpj/59291534000167/token
-CPF: https://slazinnn.herokuapp.com/api/consulta/cpf/10336009895/slazinnnn`;
+CPF: https://slazinnn.herokuapp.com/api/consulta/cpf/10336009895/token`;
 
 
 app.get("/", function (req, res) {
