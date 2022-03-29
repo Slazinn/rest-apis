@@ -1,4 +1,4 @@
- const express = require('express')
+const express = require('express')
 const app = express()
 const axios = require('axios')
 
@@ -41,7 +41,11 @@ app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
 
  // SISTEMA PUSSY
 
-const pussyy = [
+  app.get('/api/nsfw/pussy&token=:q2', async (req, res) => {
+	var isToken = token.includes(`${req.params.q2}`)
+	var tokencheck = isToken ? 's' : 'n'
+	if (tokencheck != 'n') {
+	const pussyy = [
 {"result": "https://cdni.pornpics.com/460/7/374/69356267/69356267_042_de7e.jpg"},
 {"result": "https://cdni.pornpics.com/460/7/488/96701412/96701412_009_a4f5.jpg"},
 {"result": "https://cdni.pornpics.com/460/1/236/99030831/99030831_009_38ab.jpg"},
@@ -99,23 +103,18 @@ const pussyy = [
 {"result": "https://www.xvideosincesto.com/wp-content/uploads/2020/04/fotos-de-bucetas-54.jpg"},
 {"result": "https://www.xvideosincesto.com/wp-content/uploads/2020/04/fotos-de-bucetas-56.jpg"}
 ]
-
 const puss = pussyy[Math.floor(Math.random() * pussyy.length)]
-
 var pussy = [ { Criador: '@sla_slazinn', result: puss.result, } ]
+	res.json(pussy)
+} else {
+	res.status(200).send({
+		status: true,
+		message: 'server ok',
+		error: 'infelizmente você não possui o token para realizar a consulta, compre o token com o Slazinn > wa.me/5594991423691'
+	  });
+}
+})
 
-  app.get('/api/nsfw/pussy', (req, res) => {
-      return res.json(pussy) 
-  })
-  app.post('/api/nsfw/pussy', (req, res) => {
-      const body = req.body
-      
-      if (!body)
-         return res.status(404).end()
-      
-      pussy.push(body)
-      return res.json(body)
-  }) 
 /* app.get('/api/consulta/nome/:q/:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
 	var tokencheck = isToken ? 's' : 'n'
