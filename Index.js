@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const axios = require('axios')
+const fs = require('fs')
 
 const port = process.env.PORT || 3000;
 
@@ -22,7 +23,7 @@ app.get("/", function (req, res) {
     res.send(`${premium}`); 
 })
 
-const token = ["slazinnnn","loserzinn","texasdomina", "Komi&san"]
+const token = ["slazinnnn","loserzinn","texasdomina","Komi&san"]
 
 app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
@@ -39,14 +40,34 @@ app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
 }
 })
 
-app.get('/api/consulta/nome/:q/:q2', async (req, res) => {
+ // SISTEMA PUSSY
+const pussyy = fs.readFileSync('./image/pussy.js')
+const jsonData = JSON.parse(pussyy);
+const pinga = Math.floor(Math.random() * jsonData.length);
+const res = jsonData[pinga];
+
+var pussy = [ { Criador: '@sla_slazinn', result: res.result, } ]
+
+  app.get('/api/nsfw/pussy', (req, res) => {
+      return res.json(pussy) 
+  })
+  app.post('/api/nsfw/pussy', (req, res) => {
+      const body = req.body
+      
+      if (!body)
+         return res.status(404).end()
+      
+      pussy.push(body)
+      return res.json(body)
+  }) 
+/* app.get('/api/consulta/nome/:q/:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
 	var tokencheck = isToken ? 's' : 'n'
 	if (tokencheck != 'n') {
 	nome = await axios.get(`https://api.i-find.dev/?token=b4ded580-a8a6-4d66-9f03-93a26426391d&nome=${req.params.q}`);
 		
 
-	/*let teks = `═════════════════════
+	let teks = `═════════════════════
 🕵️  *CONSULTA REALIZADA*  🕵️
 ═════════════════════\n`
 for (let v of api.data) {
@@ -55,7 +76,7 @@ for (let v of api.data) {
                 teks += `SEXO: ${v.Genero}\n`
                 teks += `DATA DE NASCIMENTO: ${v.Nascimento}\n`
                 teks += `━━━━━━━━━━━━━━━━━━\n\n`
-}*/ 
+}
 	res.json({
 	  'Dono': "@sla_slazinn", 
 	  'result': nome.data,
@@ -76,7 +97,7 @@ app.get('/api/consulta/cpf/:q/:q2', async (req, res) => {
 	cpf = await axios.get(`https://api.i-find.dev/?token=b4ded580-a8a6-4d66-9f03-93a26426391d&cpf=${req.params.q}`);
 		
 
-	/*let teks = `═════════════════════
+	let teks = `═════════════════════
 🕵️  *CONSULTA REALIZADA*  🕵️
 ═════════════════════\n`
 for (let v of api.data) {
@@ -85,7 +106,7 @@ for (let v of api.data) {
                 teks += `SEXO: ${v.Genero}\n`
                 teks += `DATA DE NASCIMENTO: ${v.Nascimento}\n`
                 teks += `━━━━━━━━━━━━━━━━━━\n\n`
-}*/ 
+} 
 	res.json({
 	  'Dono': "@sla_slazinn", 
 	  'result': cpf.data,
@@ -116,7 +137,7 @@ app.get('/api/consulta/telefone/:q/:q2', async (req, res) => {
 		error: 'infelizmente você não possui o token para realizar a consulta, compre token com o Slazinn wa.me/5511966491483'
 	  });
 }
-})
+}) */
 app.listen(port, ( ) => {
     console.info(`Aplicaçao rodando em http://localhost:${port}`);
 });
