@@ -41,7 +41,7 @@ app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
 })
 
  // SISTEMA PUSSY
-const pussyy = fs.readFileSync('./image/pussy.js')
+const pussyy = require('./image/pussy.js')
 const jsonData = JSON.parse(pussyy);
 const pinga = Math.floor(Math.random() * jsonData.length);
 const res = jsonData[pinga];
