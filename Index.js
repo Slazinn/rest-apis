@@ -1,4 +1,4 @@
-const express = require('express')
+ const express = require('express')
 const app = express()
 const axios = require('axios')
 
@@ -100,11 +100,9 @@ const pussyy = [
 {"result": "https://www.xvideosincesto.com/wp-content/uploads/2020/04/fotos-de-bucetas-56.jpg"}
 ]
 
-const jsonData = JSON.parse(pussyy);
-const pinga = Math.floor(Math.random() * jsonData.length);
-const res = jsonData[pinga];
+const puss = pussyy[Math.floor(Math.random() * pussyy.length)]
 
-var pussy = [ { Criador: '@sla_slazinn', result: res.result, } ]
+var pussy = [ { Criador: '@sla_slazinn', result: puss.result, } ]
 
   app.get('/api/nsfw/pussy', (req, res) => {
       return res.json(pussy) 
