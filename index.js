@@ -18,6 +18,10 @@ Apis de imagem +18 disponível:
 
 Pussy: https://slazinnn.herokuapp.com/api/nsfw/pussy&token=token
 Mia Malkova: https://slazinnn.herokuapp.com/api/nsfw/miamalkova&token=token
+
+Apis de imagem:
+
+Metadinha: https://slazinnn.herokuapp.com/api/image/metadinha&token=token
 `;
 
 
