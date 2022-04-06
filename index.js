@@ -12,10 +12,12 @@ qualquer erro ou bug contate meu dono! wa.me/5511966491483
 
 Apis disponível de consulta
 
-TELEFONE: https://slazinnn.herokuapp.com/api/consulta/telefone/11966491483/token
-NOME: https://slazinnn.herokuapp.com/api/consulta/nome/pedro/token
 CNPJ: https://slazinnn.herokuapp.com/api/consulta/cnpj/59291534000167/token
-CPF: https://slazinnn.herokuapp.com/api/consulta/cpf/10336009895/token`;
+
+Apis de imagem disponível:
+
+Pussy: https://slazinnn.herokuapp.com/api/nsfw/pussy&token=token
+`;
 
 
 app.get("/", function (req, res) {
