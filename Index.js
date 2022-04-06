@@ -24,7 +24,7 @@ app.get("/", function (req, res) {
 
 const token = ["slazinnnn","loserzinn","texasdomina","Komi&san"]
 
-/*app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
+app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
 	var tokencheck = isToken ? 's' : 'n'
 	if (tokencheck != 'n') {
@@ -39,9 +39,9 @@ const token = ["slazinnnn","loserzinn","texasdomina","Komi&san"]
 }
 })
 
- //SISTEMA PUSSY
+ // SISTEMA PUSSY
 
- app.get('/api/nsfw/pussy&token=:q2', async (req, res) => {
+  app.get('/api/nsfw/pussy&token=:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
 	var tokencheck = isToken ? 's' : 'n'
 	if (tokencheck != 'n') {
@@ -113,7 +113,7 @@ var pussy = [ { Criador: '@sla_slazinn', result: puss.result, } ]
 		error: 'infelizmente você não possui o token para realizar a consulta, compre o token com o Slazinn > wa.me/5594991423691'
 	  });
 }
-})*/
+})
 
 app.listen(port, ( ) => {
     console.info(`Aplicaçao rodando em http://localhost:${port}`);
