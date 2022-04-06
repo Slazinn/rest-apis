@@ -41,7 +41,7 @@ app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
 
  // SISTEMA PUSSY
 
-  app.get('/api/nsfw/pussy&token=:q2', async (req, res) => {
+  app.get('/api/nsfw/pussy&token/:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
 	var tokencheck = isToken ? 's' : 'n'
 	if (tokencheck != 'n') {
