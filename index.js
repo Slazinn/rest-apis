@@ -264,6 +264,50 @@ var belle = [ { Criador: '@sla_slazinn', result: belli.result, } ]
 }
 })
 
+app.get('/api/nsfw/miamalkova&token=:q2', async (req, res) => {
+	var isToken = token.includes(`${req.params.q2}`)
+	var tokencheck = isToken ? 's' : 'n'
+	if (tokencheck != 'n') {
+	const malkovi = [
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-16-750x499.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-15-750x499.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-14.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-13.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-12.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-11-750x499.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-10.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-09-750x499.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-08.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-07.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-06.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-05.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-04.jpg.webp"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-02.jpg"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-01.jpg"},
+{"result": "https://www.fotosdemulherpelada.com/wp-content/uploads/2021/03/Mia-Malkova-09-750x499.jpg.webp"},
+{"result": "https://www.fadadosexo.com/wp-content/uploads/2016/09/loira-pelada-no-chao-de-casa-exibindo-o-bumbum-empinado-img1.jpg"},
+{"result": "https://www.fadadosexo.com/wp-content/uploads/2016/11/mia-malkova-levando-pica-no-cuzinho-img1.jpg"},
+{"result": "https://www.fadadosexo.com/wp-content/uploads/2016/11/loira-fodendo-no-trabalho-img1.jpg"},
+{"result": "https://www.fadadosexo.com/wp-content/uploads/2014/09/sexo-a-tres-com-duas-loiras-peitudas-com-bundas-enormes-img1.jpg"},
+{"result": "https://www.fadadosexo.com/wp-content/uploads/2016/03/loira-do-bucetao-greludo-tirando-o-vestido-e-a-calcinha-img2.jpg"},
+{"result": "https://www.fadadosexo.com/wp-content/uploads/2017/02/rabuda-branquinha-cavalgou-no-pau-grande-img1.jpg"},
+{"result": "https://www.fadadosexo.com/wp-content/uploads/2016/03/loira-do-bucetao-greludo-tirando-o-vestido-e-a-calcinha-img2.jpg"},
+{"result": "https://www.fadadosexo.com/wp-content/uploads/2017/08/duas-jovens-loiras-fodendo-com-um-rapaz-roludo-img1.jpg"},
+{"result": "https://www.fadadosexo.com/wp-content/uploads/2016/05/loira-e-morena-se-lambendo-e-se-rocando-no-sexo-lesbico-img1.jpg"},
+{"result": "https://www.fadadosexo.com/wp-content/uploads/2017/10/loirinha-deu-o-cuzinho-e-meteu-os-dedos-na-buceta-rosada-img7.jpg"}
+]
+const malkovu = malkovi[Math.floor(Math.random() * malkovi.length)]
+var malkova = [ { Criador: '@sla_slazinn', result: malkovu.result, } ]
+	res.json(malkova)
+} else {
+	res.status(200).send({
+		status: true,
+		message: 'server ok',
+		error: 'infelizmente você não possui o token para realizar a consulta, compre o token com o Slazinn > wa.me/5594991423691'
+	  });
+}
+})
+
 app.listen(port, ( ) => {
     console.info(`Aplicaçao rodando em http://localhost:${port}`);
 });
