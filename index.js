@@ -1,15 +1,28 @@
 const express = require('express')
 const app = express()
 const axios = require('axios')
-const fs = require('fs')
+
 const port = process.env.PORT || 3000;
 
+app.enable('trust proxy');
+app.set("json spaces",2)
+
+const premium = `Olá usuário! Minhas Apis estão em desenvolvimento, 
+qualquer erro ou bug contate meu dono! wa.me/5511966491483
+
+Apis disponível de consulta
+
+TELEFONE: https://slazinnn.herokuapp.com/api/consulta/telefone/11966491483/token
+NOME: https://slazinnn.herokuapp.com/api/consulta/nome/pedro/token
+CNPJ: https://slazinnn.herokuapp.com/api/consulta/cnpj/59291534000167/token
+CPF: https://slazinnn.herokuapp.com/api/consulta/cpf/10336009895/token`;
+
+
 app.get("/", function (req, res) {
-    res.send("Ola usuário"); 
+    res.send(`${premium}`); 
 })
 
-const token = ["teste"]
-
+const token = ["slazinnnn","loserzinn","texasdomina", "Komi&san"]
 
 app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
@@ -21,7 +34,7 @@ app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
 	res.status(200).send({
 		status: true,
 		message: 'server ok',
-		error: 'infelizmente você não possui o token para realizar a consulta, compre o token com o Markos > wa.me/5594991423691'
+		error: 'infelizmente você não possui o token para realizar a consulta, compre o token com o Slazinn > wa.me/5594991423691'
 	  });
 }
 })
