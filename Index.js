@@ -115,7 +115,6 @@ var pussy = [ { Criador: '@sla_slazinn', result: puss.result, } ]
 }
 })
 
-
 app.listen(port, ( ) => {
     console.info(`Aplicaçao rodando em http://localhost:${port}`);
 });
