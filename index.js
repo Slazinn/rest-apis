@@ -27,6 +27,7 @@ app.get("/", function (req, res) {
 
 const token = ["slazinnnn","loserzinn","texasdomina","Komi&san"]
 
+//SISTEMA CNPJ
 app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
 	var tokencheck = isToken ? 's' : 'n'
@@ -264,7 +265,7 @@ var belle = [ { Criador: '@sla_slazinn', result: belli.result, } ]
 	  });
 }
 })
-
+ // SISTEMA MIA MALKOVA
 app.get('/api/nsfw/miamalkova&token=:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
 	var tokencheck = isToken ? 's' : 'n'
