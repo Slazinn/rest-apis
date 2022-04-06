@@ -8,7 +8,7 @@ app.enable('trust proxy');
 app.set("json spaces",2)
 
 const premium = `Olá usuário! Minhas Apis estão em desenvolvimento, 
-qualquer erro ou bug contate meu dono! wa.me/5511966491483
+qualquer erro ou bug contate meu dono! wa.me/5511966491483\n
 
 Apis disponível de consulta
 
