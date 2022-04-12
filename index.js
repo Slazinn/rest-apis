@@ -640,7 +640,7 @@ const coosplay = [
 {"result": "https://images2.imgbox.com/4f/9d/4i4qdiYv_o.jpeg"}
 ]
 const cossplay = coosplay[Math.floor(Math.random() * coosplay.length)]
-var cosplay = [ { Criador: '@sla_slazinn', result: cossplay, } ]
+var cosplay = [ { Criador: '@sla_slazinn', result: cossplay.result, } ]
 	res.json(cosplay)
 } else {
 	res.status(200).send({
