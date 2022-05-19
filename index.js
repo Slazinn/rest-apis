@@ -32,7 +32,7 @@ app.get("/", function (req, res) {
 const token = ["slazinnnn","loserzinn","texasdomina","Komi&san"]
 
 //SISTEMA CNPJ
-app.get('/api/consulta/cnpj/:q/:q2', async (req, res) => {
+app.get('/api/consulta/cnpj/:q&token=:q2', async (req, res) => {
 	var isToken = token.includes(`${req.params.q2}`)
 	var tokencheck = isToken ? 's' : 'n'
 	if (tokencheck != 'n') {
