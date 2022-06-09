@@ -14,10 +14,10 @@ Apis disponível de consulta
 
 CNPJ: https://slazinnn.herokuapp.com/api/consulta/cnpj/59291534000167/token
 
-Apis de imagem +18 disponível:\n
+Apis de imagem +18 disponível:
 
-Pussy: https://slazinnn.herokuapp.com/api/nsfw/pussy&token=token\n
-Mia Malkova: https://slazinnn.herokuapp.com/api/nsfw/miamalkova&token=token\n\n
+Pussy: https://slazinnn.herokuapp.com/api/nsfw/pussy&token=token
+Mia Malkova: https://slazinnn.herokuapp.com/api/nsfw/miamalkova&token=token
 
 Apis de imagem:
 
