@@ -29,7 +29,7 @@ app.get("/", function (req, res) {
     res.send(`${premium}`); 
 })
 
-const token = ["slazinnnn","loserzinn","texasdomina","Komi&san"]
+const token = ["slazinnnn","loserzinn","texasdomina","Starpro"]
 
 //SISTEMA CNPJ
 app.get('/api/consulta/cnpj&text=:q&token=:q2', async (req, res) => {
