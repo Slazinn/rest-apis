@@ -123,6 +123,49 @@ var pussy = [ { Criador: '@sla_slazinn', result: puss.result, } ]
 }
 })
 
+// SISTEMA RABUDA
+app.get('/api/nsfw/rabuda&token=:q2', async (req, res) => {
+	var isToken = token.includes(`${req.params.q2}`)
+	var tokencheck = isToken ? 's' : 'n'
+	if (tokencheck != 'n') {
+	const rabuuda = [
+{"result": "https://telegra.ph/file/337e1335bdcf607bf3c3b.mp4"},
+{"result": "https://telegra.ph/file/f533eab3687db62f5f542.mp4"},
+{"result": "https://telegra.ph/file/77f753323a1e58b7549e8.mp4"},
+{"result": "https://telegra.ph/file/24780ca7a994bf9f06687.mp4"},
+{"result": "https://telegra.ph/file/54bdd1559652dd2ac0867.mp4"},
+{"result": "https://telegra.ph/file/3625d1ed2b1ee0b756db1.mp4"},
+{"result": "https://telegra.ph/file/94531fa3fa73e6b26b64a.mp4"},
+{"result": "https://telegra.ph/file/38584fe9fc7dfefb3442c.mp4"},
+{"result": "https://telegra.ph/file/52d27bca88c02e9fd6f26.mp4"},
+{"result": "https://telegra.ph/file/ce564a20ba3c4f6f9fe95.mp4"},
+{"result": "https://telegra.ph/file/1648331546f6346c663f2.mp4"},
+{"result": "https://telegra.ph/file/b41b2cdc145ee399ad86b.mp4"},
+{"result": "https://telegra.ph/file/d4a93f95bad7b241e8018.mp4"},
+{"result": "https://telegra.ph/file/76dc6b29acf0d34cac3ee.mp4"},
+{"result": "https://telegra.ph/file/456201aa9319d6fa26b0b.mp4"},
+{"result": "https://telegra.ph/file/6660aa63b72700a175a53.mp4"},
+{"result": "https://telegra.ph/file/81d0fee3825a1f4bdd491.mp4"},
+{"result": "https://telegra.ph/file/bb78bf2239e0206afa4cd.mp4"},
+{"result": "https://telegra.ph/file/c30e93a8a126f37043fe5.mp4"},
+{"result": "https://telegra.ph/file/ccd17ea4425a9e543649e.mp4"},
+{"result": "https://telegra.ph/file/f8dd1fc370a9e48018f6c.mp4"},
+{"result": "https://telegra.ph/file/62ad293e6324ee1626e55.mp4"},
+{"result": "https://telegra.ph/file/475fa4e8fe86c8138b858.mp4"},
+{"result": "https://telegra.ph/file/30b32c732d9cf93dd6f37.mp4"}
+]
+const raabuda = rabuuda[Math.floor(Math.random() * rabuuda.length)]
+var rabuda = [ { Criador: '@sla_slazinn', result: raabuda.result, } ]
+	res.json(rabuda)
+} else {
+	res.status(200).send({
+		status: true,
+		message: 'server ok',
+		error: 'infelizmente você não possui o token para realizar a consulta, compre o token com o Slazinn > wa.me/5594991423691'
+	  });
+}
+})
+
 // SISTEMA BELLE
 
   app.get('/api/nsfw/belle&token=:q2', async (req, res) => {
